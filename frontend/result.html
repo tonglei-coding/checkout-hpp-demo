@@ -1,0 +1,13 @@
+<body>
+    <div class="container">
+      <h1 id="resultStatus">Payment Processing...</h1>
+      <p id="resultDetail"></p>
+    </div>
+    <script>
+      // 从URL参数解析支付结果
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById('resultStatus').textContent = 
+        params.get('success') === 'true' ? 'Payment Approved!' : 'Payment Failed';
+      document.getElementById('resultDetail').textContent = params.get('message');
+    </script>
+  </body>

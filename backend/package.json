@@ -1,0 +1,13 @@
+{
+  "name": "checkout-hosted-demo",
+  "version": "1.0.0",
+  "description": "Checkout.com Hosted Payment Page Demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "checkout-sdk-node": "^3.0.0"
+  }
+}

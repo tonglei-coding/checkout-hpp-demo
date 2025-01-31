@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iPhone Cases - Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>iPhone 15 Case - €29.99</h1>
+    <button id="payButton">Proceed to Payment</button>
+  </div>
+
+  <script>
+    document.getElementById('payButton').addEventListener('click', async () => {
+      const response = await fetch('http://localhost:3000/create-payment-link');
+      const { url } = await response.json();
+      window.location.href = url; // 重定向到Checkout.com托管页面
+    });
+  </script>
+</body>
+</html>
