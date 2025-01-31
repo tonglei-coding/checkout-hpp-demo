@@ -6,7 +6,7 @@ const app = express();
 // 新增：托管前端目录为静态资源
 app.use(express.static(path.join(__dirname, '../frontend')));
 
-const cko = new Checkout('sk_sbox_txpyg4zdo4pvb42jiag4dp4qcye', { 
+const cko = new Checkout('sk_sbox_xxx', { 
   environment: 'sandbox' // 测试环境
 });
 
